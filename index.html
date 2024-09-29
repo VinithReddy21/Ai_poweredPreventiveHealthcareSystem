@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Preventive Healthcare System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>AI-Powered Preventive Healthcare</h1>
+        <p>Proactively manage your wellness!</p>
+    </header>
+
+    <main>
+        <section id="data-input">
+            <h2>Submit Your Health Data</h2>
+            <form id="health-data-form">
+                <input type="text" id="user-id" name="user-id" placeholder="User ID" required>
+                <input type="number" id="blood-pressure" name="blood-pressure" placeholder="Blood Pressure" required>
+                <input type="number" id="exercise-hours" name="exercise-hours" placeholder="Exercise Hours per Week" required>
+                <select id="diet" name="diet">
+                    <option value="balanced">Balanced</option>
+                    <option value="high_sugar">High Sugar</option>
+                    <option value="low_carb">Low Carb</option>
+                </select>
+                <button type="submit">Submit Data</button>
+            </form>
+        </section>
+
+        <section id="recommendations">
+            <h2>Your Recommendations</h2>
+            <ul id="recommendation-list"></ul>
+        </section>
+
+        <section id="view-data">
+            <h2><a href="/view_data">View Stored Data</a></h2>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AI-Powered Healthcare. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
